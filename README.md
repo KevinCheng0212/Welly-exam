@@ -1,8 +1,8 @@
 # 偉利面試題目
 ## 題目與答案位置
-五個題目與答案分別放置在五個branch，以第一題為例：
+五個題目與答案分別放置在五個branch，以第五題為例：
 ```
-git checkout question-1
+git checkout question-5
 ```
 
 - 答案顯示於：`src/app/page.js`
