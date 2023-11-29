@@ -1,20 +1,31 @@
 "use client";
-import React,{useState} from "react";
+import React, { useState } from "react";
 import { CodeBlock } from "react-code-blocks";
-
-function reverseString(str) {
-  return str.split("").reverse().join("");
-}
-console.log(reverseString("Hello"));
+import ConditionalRendering from "./ConditionalRendering";
 
 export default function Home() {
+  const [isLogged, setLogged] = useState(false);
+  const changeLogState = () => {
+    setLogged(!isLogged);
+  };
   return (
     <main>
-      <h1>This is question :</h1>
+      <h1>This is question 4: React: 條件渲染</h1>
       <h3>Answer:</h3>
-      <div>
-        
+      <CodeBlock
+        text={`<div>
+        <ConditionalRendering isLoggedIn={isLogged}></ConditionalRendering>
       </div>
+      <button onClick={changeLogState}>btn</button>`}
+        language="javascript"
+        showLineNumbers={true}
+        wrapLines={true}
+        codeBlock={true}
+      />
+      <div>
+        <ConditionalRendering isLoggedIn={isLogged}></ConditionalRendering>
+      </div>
+      <button onClick={changeLogState}>btn</button>
     </main>
   );
 }
