@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { CodeBlock } from "react-code-blocks";
 
-function ormatName(firstName, lastName) {
+function formatName(firstName, lastName) {
   if (!lastName) {
     return firstName;
   }
@@ -13,9 +13,9 @@ function ormatName(firstName, lastName) {
     return lastName + firstName;
   }
 }
-console.log(ormatName("Kevin", "Cheng"));
-console.log(ormatName("凱文", "鄭"));
-console.log(ormatName("凱文", ""));
+console.log(formatName("Kevin", "Cheng"));
+console.log(formatName("凱文", "鄭"));
+console.log(formatName("凱文", ""));
 
 export default function home() {
   return (
@@ -39,9 +39,9 @@ export default function home() {
             return lastName + firstName;
         }
       }
-        console.log(ormatName("Kevin", "Cheng")); // Kevin Cheng
-        console.log(ormatName("凱文", "鄭")); // 鄭凱文
-        console.log(ormatName("凱文","")); // 凱文`}
+        console.log(formatName("Kevin", "Cheng")); // Kevin Cheng
+        console.log(formatName("凱文", "鄭")); // 鄭凱文
+        console.log(formatName("凱文","")); // 凱文`}
         language="javascript"
         showLineNumbers={true}
         wrapLines={true}
